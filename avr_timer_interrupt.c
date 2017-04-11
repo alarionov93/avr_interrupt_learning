@@ -13,7 +13,7 @@
 // volatile uint8_t st = 0;
 // volatile uint8_t incom;
 
-inline void setup() {
+//inline void setup() {
   // cli(); 
 
   // DDRB was here
@@ -37,7 +37,7 @@ inline void setup() {
   // UBRR0L = BAUD_PRESCALE; // Load lower 8-bits of the baud rate value into the low byte of the UBRR register
 
   // sei();
-}
+//}
 
 // ISR(USART_RX_vect) {
 //     // // _delay_ms(2);
