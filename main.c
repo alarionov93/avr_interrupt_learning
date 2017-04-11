@@ -6,7 +6,7 @@
 void main(void) {
 	DDRB |= (1 << PB1);
 	// PORTB |= (1 << PB1);
-	while (true)
+	for (;;)
 	{
 		PORTB |= (1 << PB1);
 		_delay_ms(200);
