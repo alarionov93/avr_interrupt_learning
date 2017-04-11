@@ -7,8 +7,8 @@
 // #define USART_BAUDRATE 9600
 // #define BAUD_PRESCALE (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
 
-#define GREEN_LED PB1
-#define RED_LED PB0
+// #define GREEN_LED PB1
+// #define RED_LED PB0
 
 // volatile uint8_t st = 0;
 // volatile uint8_t incom;
@@ -51,15 +51,15 @@ inline void setup() {
 
 int main() {
 
-  DDRB |= (1 << RED_LED);
-  DDRB |= (1 << GREEN_LED);
+  DDRB |= (1 << PB0);
+  // DDRB |= (1 << GREEN_LED);
 
 	// setup();
 	while (1)
 	{
-		PORTB |= (1 << RED_LED);
+		PORTB |= (1 << PB0);
 		_delay_ms(200);
-		PORTB &= ~(1 << RED_LED);
+		PORTB &= ~(1 << PB0);
 		_delay_ms(200);
 	}
 }
