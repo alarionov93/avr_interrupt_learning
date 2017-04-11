@@ -1,24 +1,22 @@
 #define F_CPU 16000000UL
 
 #include <avr/io.h>
-#include <avr/interrupt.h>
+// #include <avr/interrupt.h>
 #include <util/delay.h>
 
-#define USART_BAUDRATE 9600
-#define BAUD_PRESCALE (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
+// #define USART_BAUDRATE 9600
+// #define BAUD_PRESCALE (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
 
 #define GREEN_LED PB1
 #define RED_LED PB0
 
-volatile uint8_t st = 0;
-volatile uint8_t incom;
+// volatile uint8_t st = 0;
+// volatile uint8_t incom;
 
 inline void setup() {
-  cli(); 
+  // cli(); 
 
-  DDRB |= (1 << RED_LED);
-  DDRB |= (1 << GREEN_LED);
-
+  // DDRB was here
   // TCCR1B = 0;
   // OCR0B = 255;
 
@@ -51,8 +49,12 @@ inline void setup() {
 //     // reti();
 // }
 
-void main(void) {
-	setup();
+int main() {
+
+  DDRB |= (1 << RED_LED);
+  DDRB |= (1 << GREEN_LED);
+
+	// setup();
 	while (1)
 	{
 		PORTB |= (1 << RED_LED);
