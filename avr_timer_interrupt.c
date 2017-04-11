@@ -23,9 +23,9 @@ inline void setup() {
   // OCR0B = 255;
 
   // TCCR1B |= (1 << WGM12);
-  TCCR1B |= (1 << CS12);
-  TCCR1B |= (1 << CS10);
-  TIMSK1 |= (1 << TOIE1);
+  // TCCR1B |= (1 << CS12);
+  // TCCR1B |= (1 << CS10);
+  // TIMSK1 |= (1 << TOIE1);
   //8 data bits
   // UCSR0C |= (1 << UCSZ01);
   // UCSR0C |= (1 << UCSZ00);
@@ -38,7 +38,7 @@ inline void setup() {
   // UBRR0H = (BAUD_PRESCALE >> 8); // Load upper 8-bits of the baud rate value into the high byte of the UBRR register
   // UBRR0L = BAUD_PRESCALE; // Load lower 8-bits of the baud rate value into the low byte of the UBRR register
 
-  sei();
+  // sei();
 }
 
 // ISR(USART_RX_vect) {
